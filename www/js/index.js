@@ -43,4 +43,11 @@ var app = {
     }
 };
 
+angular.module('myApp', ['ngCordova']);
+module.controller('MyCtrl', function($scope, $cordovaDialogs){
+    $cordovaDialogs.alert('message', 'title', 'button name').then(function(){
+        return "Button clicked";
+    });
+});
+
 app.initialize();
